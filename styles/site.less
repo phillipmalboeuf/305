@@ -213,14 +213,18 @@ img[data-src]:not([src]) {
 
 //  Body Text
 
+.body-text {
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: 20px;
+  line-height: 1.33;
+}
+
 body {
 
   // .tweak-body-font;
   color: @tweak-body-text-color;
 
-  font-family: "Inter", Arial, Helvetica, sans-serif !important;
-  font-size: 20px;
-  line-height: 1.33;
+  .body-text;
 }
 
 p {
@@ -263,15 +267,19 @@ h1, h2, h3 {
 
 }
 
+.heading {
+  font-family: "Three O Five Caps";
+  font-weight: normal;
+  font-size: @heading-size;
+  line-height: 0.88;
+}
+
 h1 {
 
   // .tweak-h1-font;
   // .responsive-font-size-h1;
 
-  font-family: "Three O Five Caps";
-  font-weight: normal;
-  font-size: @heading-size;
-  line-height: 0.88;
+  .heading;
 
   margin: 0.1em 0;
 }
@@ -320,9 +328,9 @@ h3 + h1, h3 + h2, h3 + h3 {
   letter-spacing: 0;
 
   background-color: transparent;
-  border: 0.08em solid currentColor;
+  border: 0.08em solid currentColor !important;
 
-  span {
+  span.script {
     pointer-events: none;
     color: @tweak-header-primary-nav-link-color;
     font-family: "Three O Five Script";
@@ -718,6 +726,57 @@ a {
 //    System Overrides
 
 // =======================================================
+
+// -----------------------------------------
+
+//  Newsletter
+
+.newsletter-block {
+  color: white;
+  background-color: @dark;
+  padding: 2em !important;
+  background-image: url('/assets/dark_snakes.png');
+  background-position: center;
+
+  .newsletter-form-header-title,
+  .newsletter-form-header-description {
+    color: white;
+  }
+
+  .newsletter-form-header-title {
+    .heading;
+  }
+
+  .newsletter-form-header-description p,
+  .newsletter-form-field-element {
+    .body-text;
+  }
+
+  .newsletter-form-fields-wrapper {
+    width: 100%;
+  }
+
+  .newsletter-form-wrapper--layoutStack .newsletter-form-name-fieldset,
+  .newsletter-form-wrapper--layoutStack .newsletter-form-field-wrapper {
+    max-width: none;
+  }
+
+  .newsletter-form-button-wrapper {
+    margin-left: auto;
+    height: @heading-size/1.5;
+  }
+
+  .newsletter-form-button {
+    .sqs-block-button .sqs-block-button-element--large;
+
+    font-size: @heading-size/2;
+    color: white;
+    background: @accent;
+    padding: 0.3em !important;
+    white-space: normal;
+    max-width: 20ch
+  }
+}
 
 
 // -----------------------------------------
