@@ -170,6 +170,7 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
+    <squarespace:script src="things.js" combo="false" />
 
     {squarespace-footers}
 
