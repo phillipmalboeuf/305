@@ -58,6 +58,16 @@ body {
 
 }
 
+
+.sqs-row {
+  display: flex;
+  align-items: center;
+}
+
+  [class*=sqs-col] {
+    float: none;
+  }
+
 // =======================================================
 
 //    Loader
@@ -229,7 +239,7 @@ body {
 
 p {
 
-  margin: 0.1em 0;
+  margin: 0.88em 0;
 
   &:first-child { margin-top: 0; }
   &:last-child { margin-bottom: 0; }
@@ -727,6 +737,15 @@ a {
 
 // =======================================================
 
+
+.sqs-col-6 .sqs-block-html {
+
+  .sqs-block-content {
+    max-width: 42ch;
+    margin: 0 auto;
+  }
+}
+
 // -----------------------------------------
 
 //  Newsletter
@@ -775,6 +794,46 @@ a {
     padding: 0.3em !important;
     white-space: normal;
     max-width: 20ch
+  }
+}
+
+// -----------------------------------------
+
+//  Slideshow
+
+.sqs-gallery-block-slideshow {
+  .sqs-gallery {
+    max-height: 88vh;
+  }
+
+  .meta {
+    background: transparent;
+
+    .meta-inside {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .meta-title {
+      .heading;
+      order: 2;
+      width: 100%;
+
+      + .meta-description {
+        margin-bottom: 1em;  
+      }
+    }
+
+    .meta-description,
+    .meta-description p {
+      .heading;
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  .sqs-gallery-controls .previous, .sqs-gallery-controls .next {
+    background: transparent;
   }
 }
 
