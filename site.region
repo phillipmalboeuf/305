@@ -115,21 +115,10 @@
 
               <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
                 {.section website}
-                  {.section logoImageUrl}
-                    <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
-                  {.or}
-                    {siteTitle}
-                  {.end}
+                  {siteTitle}
                 {.end}
               </a>
               {.section website}{.section siteTagLine}<div class="Header-tagline" data-nc-element="tagline">{@}</div>{.end}{.end}
-
-            </div>
-            <div data-nc-container="bottom-right">
-
-              <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
-                <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
-              </nav>
 
             </div>
           </div>
