@@ -2,7 +2,7 @@
 <html {.if authenticatedAccount}data-authenticated-account{.end}>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {squarespace-headers}
 
@@ -145,7 +145,11 @@
 
               <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
                 {.section website}
-                  {siteTitle}
+                  {.section logoImageUrl}
+                    <img src="{logoImageUrl}?format=500w" alt="{siteTitle}" class="Header-branding-logo" />
+                  {.or}
+                    {siteTitle}
+                  {.end}
                 {.end}
               </a>
               {.section website}{.section siteTagLine}<div class="Header-tagline" data-nc-element="tagline">{@}</div>{.end}{.end}
