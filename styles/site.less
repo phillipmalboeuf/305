@@ -32,12 +32,12 @@ html {
 
 body {
 
-  &.tweak-site-width-option-constrained-width {
+  // &.tweak-site-width-option-constrained-width {
 
-    background-color: @tweak-site-body-background-color;
-    .font-smoothing(@tweak-site-body-background-color);
+  //   background-color: @tweak-site-body-background-color;
+  //   .font-smoothing(@tweak-site-body-background-color);
 
-  }
+  // }
 
   &.tweak-site-width-option-full-width,
   &.tweak-site-width-option-full-background {
@@ -61,11 +61,23 @@ body {
 
 .sqs-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
   [class*=sqs-col] {
     float: none;
+  }
+
+  @media screen and (max-width: @tweak-mobile-breakpoint) {
+    [class*=sqs-col] {
+      // width: 100% !important;
+      margin-bottom: 3rem;
+    }
+
+    .sqs-row {
+      display: block;
+    }
   }
 
 // =======================================================
@@ -125,7 +137,7 @@ img[data-src]:not([src]) {
 }
 
 .sqs-block-image .design-layout-poster .image-title p {
-  font-family: "Three O Five Caps", Arial, Helvetica, sans-serif !important;
+  font-family: "Three O Five Caps", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
   font-size: @heading-size;
 }
 
@@ -224,7 +236,7 @@ img[data-src]:not([src]) {
 //  Body Text
 
 .body-text {
-  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-family: "Inter UI", "Inter" Arial, Helvetica, sans-serif !important;
   font-size: 20px;
   line-height: 1.33;
 }
@@ -278,7 +290,7 @@ h1, h2, h3 {
 }
 
 .heading {
-  font-family: "Three O Five Caps";
+  font-family: "Three O Five Caps", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: normal;
   font-size: @heading-size;
   line-height: 0.88;
@@ -332,7 +344,7 @@ h3 + h1, h3 + h2, h3 + h3 {
 .sqs-block-button .sqs-block-button-element--large {
   position: relative;
   color: inherit;
-  font-family: "Three O Five Caps";
+  font-family: "Three O Five Caps", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: normal;
   font-size: @heading-size;
   letter-spacing: 0;
@@ -420,12 +432,12 @@ a {
 
   }
 
-  .tweak-site-width-option-constrained-width & {
+  // .tweak-site-width-option-constrained-width & {
 
-    max-width: @tweak-site-width;
-    margin-left: auto; margin-right: auto;
+  //   max-width: @tweak-site-width;
+  //   margin-left: auto; margin-right: auto;
 
-  }
+  // }
 
 
   &-inner {
@@ -757,6 +769,14 @@ a {
   background-image: url('/assets/dark_snakes.png');
   background-position: center;
 
+  .newsletter-form {
+    text-align: left;
+  }
+
+  .newsletter-form-header {
+    width: 100%;
+  }
+
   .newsletter-form-header-title,
   .newsletter-form-header-description {
     color: white;
@@ -775,13 +795,18 @@ a {
     width: 100%;
   }
 
+  .newsletter-form-field-wrapper {
+    display: block;
+  }
+
   .newsletter-form-wrapper--layoutStack .newsletter-form-name-fieldset,
   .newsletter-form-wrapper--layoutStack .newsletter-form-field-wrapper {
     max-width: none;
   }
 
   .newsletter-form-button-wrapper {
-    margin-left: auto;
+    width: 100%;
+    text-align: right;
     height: @heading-size/1.5;
   }
 
@@ -793,7 +818,12 @@ a {
     background: @accent;
     padding: 0.3em !important;
     white-space: normal;
-    max-width: 20ch
+    max-width: 16ch;
+  }
+
+  .newsletter-form-footnote {
+    color: white;
+    text-align: right;
   }
 }
 
