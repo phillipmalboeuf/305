@@ -41,6 +41,7 @@
     <div class="Loader"></div>
 
     {@|apply mobile.block}
+    {@|apply data.block}
 
     <div class="Parallax-host-outer">
       <div class="Parallax-host" data-parallax-host>

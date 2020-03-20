@@ -141,6 +141,11 @@ img[data-src]:not([src]) {
   font-size: @heading-size;
 }
 
+.sqs-block-image,
+.sqs-block-gallery {
+  padding: 0 !important;
+}
+
 
 // =======================================================
 
@@ -303,7 +308,11 @@ h1 {
 
   .heading;
 
-  margin: 0.1em 0;
+  margin: 0.5em 0 0.1em;
+}
+
+.sqs-block-html .sqs-block-content > h1:first-child {
+  margin-top: 0.5em;
 }
 
 h2 {
@@ -346,7 +355,7 @@ h3 + h1, h3 + h2, h3 + h3 {
   color: inherit;
   font-family: "Three O Five Caps", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: normal;
-  font-size: @heading-size;
+  font-size: @heading-size / 1.33;
   letter-spacing: 0;
 
   background-color: transparent;
@@ -356,7 +365,7 @@ h3 + h1, h3 + h2, h3 + h3 {
     pointer-events: none;
     color: @tweak-header-primary-nav-link-color;
     font-family: "Three O Five Script";
-    font-size: 0.33em;
+    font-size: 0.42em;
     text-transform: none;
 
     display: inline-block;
@@ -825,6 +834,35 @@ a {
     color: white;
     text-align: right;
   }
+}
+
+// -----------------------------------------
+
+//  MAP
+#collection-5e63dd6d4f3cd622ab519e5e .sqs-block-map {
+ display: none;
+}
+
+[data-map] {
+  height: 42vw;
+}
+
+.summary-item-list-container {
+  max-height: 42vw;
+  overflow: auto;
+}
+
+.sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
+  padding-top: 17px;
+  border-bottom: 2px solid;
+
+  &:first-of-type {
+    border-top: 2px solid;
+  }
+}
+
+.sqs-block-summary-v2 .summary-block-setting-text-size-medium .summary-title {
+  .heading;
 }
 
 // -----------------------------------------
