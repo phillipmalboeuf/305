@@ -41,6 +41,7 @@ function things() {
             map,
             animation: google.maps.Animation.DROP,
             title: item.location.addressTitle,
+            icon: `/assets/icon_${index+1}.svg`,
             position: {
               lat: item.location.mapLat,
               lng: item.location.mapLng,
