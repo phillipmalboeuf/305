@@ -3,13 +3,17 @@ const colors = ['#FF5757', '#FE9900', '#FEED19', '#7AFF58', '#00F5E0', '#0094FE'
 
 console.log('Things')
 
-document.querySelectorAll('.sqs-block-button-element--large').forEach(element => {
+function extractScript(element) {
   const texts = element.innerHTML.split(' | ')
   element.innerHTML = texts[0]
   if (texts.length > 1) {
     element.innerHTML += '<span class="script">' + texts[1] + '</span>'
   }
-})
+}
+
+document.querySelectorAll('.sqs-block-button-element--large').forEach(extractScript)
+document.querySelectorAll('.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-title p').forEach(extractScript)
+
 
 if (document.body.id === 'collection-5e63dd6d4f3cd622ab519e5e') {
   document.querySelectorAll('.sqs-block-html h1').forEach((element, index) => {

@@ -343,7 +343,7 @@
     display: none;
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 
     padding: ceil((@mobile-overlay-menu-offset - @icon--close-width) / 2);
     line-height: 0;
@@ -353,12 +353,12 @@
 
     .tweak-mobile-overlay-close-show & { display: block; }
 
-    .tweak-mobile-overlay-slide-origin-left & { right: 0; }
-    .tweak-mobile-overlay-slide-origin-right & { left: 0; }
+    .tweak-mobile-overlay-slide-origin-left & { left: 0; }
+    .tweak-mobile-overlay-slide-origin-right & { right: 0; }
 
     .is-mobile-overlay-active & {
 
-      background-color: @tweak-mobile-overlay-close-background-color;
+      // background-color: @tweak-mobile-overlay-close-background-color;
       stroke: @tweak-mobile-overlay-close-icon-color;
       .transition2(stroke @mobile-overlay-duration @mobile-overlay-timing-function @mobile-overlay-delay, background-color @mobile-overlay-duration @mobile-overlay-timing-function @mobile-overlay-delay);
 
@@ -386,11 +386,11 @@
     top: 0;
     bottom: 0;
     z-index: 2;
-    width: 80%;
-    width: ~"calc(100% - " @mobile-overlay-menu-offset ~")";
+    width: 100%;
+    // width: ~"calc(100% - " @mobile-overlay-menu-offset ~")";
     overflow: hidden;
-    background-color: @tweak-mobile-overlay-menu-color;
-    .font-smoothing(@tweak-mobile-overlay-menu-color);
+    background-color: @accent;
+    // .font-smoothing(@tweak-mobile-overlay-menu-color);
 
 
     .tweak-mobile-overlay-slide-origin-left & {
@@ -427,7 +427,7 @@
       bottom: 0;
       z-index: 3;
       width: 100%;
-      padding: @mobile-overlay-padding;
+      padding: @mobile-overlay-padding*2 @mobile-overlay-padding/1.5;
       overflow: auto;
 
       .transition-webkit(-webkit-transform @mobile-overlay-duration @mobile-overlay-timing-function);
@@ -458,9 +458,8 @@
     display: block;
     position: relative;
     width: 100%;
-    padding-bottom: 0.618em;
+    padding-bottom: 0.1em;
     text-align: left;
-
   }
 
 
@@ -477,10 +476,10 @@
         // &-label { vertical-align: middle; }
 
         &:after {
-          content: '\00BB';
-          // vertical-align: middle;
-          font-family: sans-serif;
-          color: @tweak-mobile-overlay-menu-indicator-color;
+          // content: '\00BB';
+          // // vertical-align: middle;
+          // font-family: sans-serif;
+          // color: @tweak-mobile-overlay-menu-indicator-color;
         }
 
       }
@@ -489,7 +488,7 @@
 
     &--secondary &-item:first-child {
 
-      padding-top: 1em;
+      padding-top: 0.5em;
 
     }
 
@@ -522,20 +521,23 @@
     }
 
     &-item {
+      color: @tweak-body-text-color;
 
       &--toggle {
 
-        padding-bottom: 1.618em;
+        padding-top: 1em;
+        padding-bottom: 1em;
 
         // &-label { vertical-align: middle; }
 
         &:before {
 
-          content: '\00AB';
+          content: 'Back';
           // vertical-align: middle;
-          font-family: sans-serif;
-          color: @tweak-mobile-overlay-menu-indicator-color;
-
+          // font-family: sans-serif;
+          // color: @tweak-mobile-overlay-menu-indicator-color;
+          color: @tweak-body-text-color;
+          .heading;
         }
 
       }
@@ -555,7 +557,7 @@
   }
 
   &-folder-item {
-    color: @tweak-mobile-overlay-menu-primary-text-color;
+    // color: @tweak-mobile-overlay-menu-primary-text-color;
   }
 
 }
@@ -642,8 +644,11 @@ body:not(.tweak-mobile-overlay-menu-secondary-inherit) {
 
 body:not(.tweak-mobile-overlay-menu-primary-style-button) {
   .Mobile-overlay-nav .Mobile-overlay-nav-item {
-    .tweak-mobile-overlay-menu-primary-font;
-    color: @tweak-mobile-overlay-menu-primary-text-color;
+    // .tweak-mobile-overlay-menu-primary-font;
+    // color: @tweak-mobile-overlay-menu-primary-text-color;
+
+    .heading;
+    color: @tweak-body-text-color;
   }
 }
 
@@ -739,8 +744,10 @@ body:not(.tweak-mobile-overlay-menu-primary-style-button) {
 
 body:not(.tweak-mobile-overlay-menu-secondary-style-button):not(.tweak-mobile-overlay-menu-secondary-inherit) {
   .Mobile-overlay-nav--secondary .Mobile-overlay-nav-item {
-    .tweak-mobile-overlay-menu-secondary-font;
-    color: @tweak-mobile-overlay-menu-secondary-text-color;
+    // .tweak-mobile-overlay-menu-secondary-font;
+    // color: @tweak-mobile-overlay-menu-secondary-text-color;
+    .heading;
+    color: white;
   }
 }
 

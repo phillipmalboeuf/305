@@ -11,7 +11,7 @@
     <figure class="Footer-logo">
       {.section website}
         {.section logoImageUrl}
-          <img src="{logoImageUrl}?format=500w" alt="{siteTitle}" class="Footer-branding-logo" />
+          <img src="/assets/white-logo.svg" alt="{siteTitle}" class="Footer-branding-logo" />
         {.or}
           {siteTitle}
         {.end}
