@@ -1,8 +1,30 @@
 <footer class="Footer" role="contentinfo" data-controller="FooterBreakpoints">
 
-  <div class="Footer-inner clear">
+  <div class="Footer-inner">
 
-    <squarespace:block-field id="footerBlocksTop" class="Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="{localizedStrings.footerTopBlocks}" />
+    {.if website.socialAccounts.0}
+    <nav class="Footer-social">
+      {@|apply social-links.block}
+    </nav>
+    {.end}
+
+    <figure class="Footer-logo">
+      {.section website}
+        {.section logoImageUrl}
+          <img src="/assets/white-logo.svg" alt="{siteTitle}" class="Footer-branding-logo" />
+        {.or}
+          {siteTitle}
+        {.end}
+      {.end}
+    </figure>
+
+    <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
+
+
+    <squarespace:block-field id="footerBlocksBottom" class="Footer-right" columns="12" label="{localizedStrings.footerBottomBlocks}" />
+
+
+    <!-- <squarespace:block-field id="footerBlocksTop" class="Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="{localizedStrings.footerTopBlocks}" />
 
     <div class="Footer-middle">
       <div class="Footer-business">
@@ -46,7 +68,7 @@
       <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
     </div>
 
-    <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="{localizedStrings.footerBottomBlocks}" />
+    <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="{localizedStrings.footerBottomBlocks}" /> -->
 
   </div>
 
