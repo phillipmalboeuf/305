@@ -49,13 +49,13 @@
 .Header--top {
 
   display: none;
-  background: @tweak-header-top-background-color;
-  .font-smoothing(@tweak-header-top-background-color);
+  // background: @tweak-header-top-background-color;
+  // .font-smoothing(@tweak-header-top-background-color);
 
 }
 .Header-inner--top {
   padding-top: @tweak-header-top-padding;
-  padding-bottom: @tweak-header-top-padding;
+  padding-bottom: 0;
 }
 
 // Show
@@ -173,23 +173,25 @@
 
 .Header-branding {
 
-  .has-site-title & { text-rendering: optimizeLegibility; }
-  .has-logo-image & { line-height: 0; }
-  &-logo { width: 100%; }
+  // .has-site-title & { text-rendering: optimizeLegibility; }
+  // .has-logo-image & { line-height: 0; }
+  // &-logo { width: 100%; }
 
+  .heading;
+  margin: -20px 0;
 }
 
 .has-site-title .Header-branding {
-  .tweak-header-branding-site-title-font;
-  color: @tweak-header-branding-site-title-color;
+  // .tweak-header-branding-site-title-font;
+  // color: @tweak-header-branding-site-title-color;
 }
-.has-site-title {
-  .Header--overlay,
-  &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery {
-    .Header-branding { color: @tweak-header-overlay-branding-site-title-color; }
-  }
-}
-.Header-branding-logo { max-width: @tweak-header-logo-width; }
+// .has-site-title {
+//   .Header--overlay,
+//   &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery {
+//     .Header-branding { color: @tweak-header-overlay-branding-site-title-color; }
+//   }
+// }
+.Header-branding-logo { max-width: 166px; }
 
 
 
@@ -443,7 +445,10 @@
 
 }
 
-.Header-nav { .tweak-header-primary-nav-font; }
+.Header-nav {
+  // .tweak-header-primary-nav-font;
+}
+
 .tweak-header-primary-nav-hover-style-plain {
   .Header-nav {
     .mixin-header-nav(primary, regular, plain);
@@ -848,13 +853,13 @@ body:not(.tweak-header-secondary-nav-hover-style-button):not(.tweak-header-secon
 // =======================================================
 
 
-.Header--overlay {
-  .mixin-template-social-icons-color(@tweak-social-icons-overlay-color);
-}
+// .Header--overlay {
+//   .mixin-template-social-icons-color(@tweak-social-icons-overlay-color);
+// }
 
-.tweak-header-bottom-overlay-on-index-gallery.has-index-gallery-first {
-  .mixin-template-social-icons-color-body(@tweak-social-icons-overlay-color);
-}
+// .tweak-header-bottom-overlay-on-index-gallery.has-index-gallery-first {
+//   .mixin-template-social-icons-color-body(@tweak-social-icons-overlay-color);
+// }
 
 
 
