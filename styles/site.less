@@ -444,12 +444,16 @@ h3 + h1, h3 + h2, h3 + h3 {
 
 
 .sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-title p {
-  font-size: @heading-size !important;
+  font-size: @heading-size*1.66 !important;
   position: relative;
   display: block;
 
+  @media screen and (max-width: @tweak-mobile-breakpoint) {
+    font-size: @heading-size !important;
+  }
+
   span.script {
-    color: @flash;
+    color: @accent;
     top: -1.66em;
   }
 
