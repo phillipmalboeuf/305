@@ -992,6 +992,41 @@ a {
 
 // -----------------------------------------
 
+//  FAQ
+
+#collection-5ea854d8d5af594196d4fdc2 {
+  h3 {
+    cursor: pointer;
+
+    &:hover {
+      color: @accent;
+    }
+
+    &:after {
+      content: ' +';
+    }
+  }
+
+  h3.question-active {
+    &:after {
+      content: ' –';
+    }
+  }
+
+  h3:not(.question-active) + p,
+  h3:not(.question-active) + ul {
+    display: none;
+
+    & + p,
+    & + ul {
+      display: none;
+    }
+  }
+}
+
+
+// -----------------------------------------
+
 //  Slideshow
 
 .sqs-gallery-block-slideshow {

@@ -27,6 +27,14 @@ if (document.body.id === 'collection-5e63dd6d4f3cd622ab519e5e') {
   })
 }
 
+if (document.body.id === 'collection-5ea854d8d5af594196d4fdc2') {
+  document.querySelectorAll('h3').forEach((element, index) => {
+    element.addEventListener('click', () => {
+      element.classList.toggle('question-active')
+    })
+  })
+}
+
 
 function things() {
 
