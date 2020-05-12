@@ -408,16 +408,26 @@ h3 + h1, h3 + h2, h3 + h3 {
 //  Buttons
 
 .sqs-block-button .sqs-block-button-element--large,
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-card a {
+.medium-button-shape-pill .sqs-block-button .sqs-block-button-element--medium,
+.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-card a,
+body:not(.button-style-default).button-style-solid input.sqs-editable-button[type='submit'] {
   position: relative;
   color: inherit;
   font-family: "Three O Five Caps", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: normal;
   font-size: @heading-size / 1.33;
   letter-spacing: 0;
+  padding: 0.33em 0.33em 0.25em;
 
   background-color: transparent;
   border: 0.08em solid currentColor !important;
+  border-radius: 0;
+}
+
+.medium-button-shape-pill .sqs-block-button .sqs-block-button-element--medium,
+body:not(.button-style-default).button-style-solid input.sqs-editable-button[type='submit'] {
+  font-size: @heading-size / 2;
+  padding: 0.2em 1.5em 0.1em;
 }
 
 .sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-card a {
@@ -1103,6 +1113,34 @@ html:not(.squarespace-damask) #collection-5ea854d8d5af594196d4fdc2 {
 
 }
 
+.sqs-block-summary-v2 .summary-item-list {
+  display: flex;
+  justify-content: center;
+
+  .summary-item {
+    margin: 0 10px !important;
+
+    .summary-thumbnail-outer-container {
+      margin-bottom: 30px;
+    }
+
+    .summary-title {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .summary-metadata-container {
+      width: 66%;
+      margin: 0 auto 20px;
+      border-bottom: 3px solid @flash;
+    }
+
+    .summary-excerpt {
+      font-style: italic;
+    }
+  }
+}
+
 
 // -----------------------------------------
 
@@ -1249,6 +1287,35 @@ html:not(.squarespace-damask) #collection-5ea854d8d5af594196d4fdc2 {
 }
 
 
+// -----------------------------------------
+
+// Form
+
+.form-wrapper {
+  padding: 66px;
+}
+
+.form-wrapper .field-list,
+.form-wrapper form {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.form-wrapper .field-list .field .field-element {
+  border: none;
+  border-bottom: 3px solid;
+  background: transparent;
+  margin: 0;
+}
+.form-wrapper .field-list .fields,
+.form-wrapper .field-list .field {
+  flex: 1;
+  margin: 0 6px;
+}
+.form-wrapper .field-list .fields {
+  margin: 0;
+}
 
 
 
