@@ -36,6 +36,19 @@ if (document.body.id === 'collection-5ea854d8d5af594196d4fdc2') {
 }
 
 
+document.querySelectorAll('figure.design-layout-poster a').forEach((element, index) => {
+  const href = element.getAttribute('href')
+  if (href.includes('youtube') || href.includes('vimeo')) {
+    element.classList.add('play-button')
+    element.setAttribute('target', '_blank')
+
+    element.parentElement.parentElement.parentElement.classList.add('play-button-wrapper')
+    element.parentElement.parentElement.parentElement.parentElement.classList.add('play-button-outer-wrapper')
+  }
+})
+
+
+
 function things() {
 
   document.querySelectorAll('[data-map]').forEach((element, index) => {
