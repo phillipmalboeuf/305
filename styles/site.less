@@ -248,13 +248,20 @@ img[data-src]:not([src]) {
   }
 }
 
-body:not(.image-block-card-dynamic-font-sizing) .sqs-block-image .image-block-outer-wrapper.design-layout-card .image-title.sqs-dynamic-text {
+body:not(.image-block-card-dynamic-font-sizing) .sqs-block-image .image-block-outer-wrapper.design-layout-card .sqs-dynamic-text {
   p {
     .body-text;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    margin-bottom: 0.5em;
+    font-size: 18px;
+  }
+
+  &.image-title {
+    p {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 0.5em;
+    }
   }
 }
 
@@ -982,6 +989,12 @@ a {
   .sqs-block-content {
     max-width: 42ch;
     margin: 0 auto;
+  }
+}
+
+.Index-page {
+  .sqs-col-6 .sqs-block-html .sqs-block-content {
+    max-width: none;
   }
 }
 
