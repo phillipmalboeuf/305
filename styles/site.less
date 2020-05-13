@@ -1088,7 +1088,8 @@ a {
 
 // -----------------------------------------
 
-//  MAP
+//  SUMMARIES
+
 #collection-5e63dd6d4f3cd622ab519e5e .sqs-block-map {
  display: none;
 }
@@ -1113,6 +1114,20 @@ a {
 
 .sqs-block-summary-v2 .summary-block-setting-text-size-medium .summary-title {
   .heading;
+}
+
+.sqs-block-summary-v2:not(.summary-block-setting-show-thumbnail) {
+  .summary-item-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+ .summary-item {
+    padding: 40px;
+    background: @flash;
+    display: flex;
+    align-items: center;
+  }
 }
 
 // -----------------------------------------
