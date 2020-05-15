@@ -39,11 +39,46 @@ if (document.body.id === 'collection-5ea854d8d5af594196d4fdc2') {
 document.querySelectorAll('figure.design-layout-poster a').forEach((element, index) => {
   const href = element.getAttribute('href')
   if (href.includes('youtube') || href.includes('vimeo')) {
+    console.log(element)
+
     element.classList.add('play-button')
     element.setAttribute('target', '_blank')
 
     element.parentElement.parentElement.parentElement.classList.add('play-button-wrapper')
     element.parentElement.parentElement.parentElement.parentElement.classList.add('play-button-outer-wrapper')
+
+    const iframe = document.createElement('iframe')
+    iframe.frameBorder = 0
+    iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    iframe.allowFullscreen = true
+    iframe.style = 'position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 88; opacity: 0; transition: opacity 666ms; pointer-events: none;'
+
+    const close = document.createElement('button')
+    close.style = 'position: fixed; top: 88px; right: 20px; z-index: 89; opacity: 0; transition: opacity 666ms; pointer-events: none; background: transparent; color: #00F5E0; border: none; outline: none;'
+    close.classList.add('heading')
+    close.innerText = '✕ Close'
+    close.addEventListener('click', e => {
+      iframe.src = undefined
+      iframe.style.opacity = 0
+      iframe.style.pointerEvents = 'none'
+      close.style.opacity = 0
+      close.style.pointerEvents = 'none'
+      document.body.style.overflowY = 'auto'
+    })
+
+    document.body.appendChild(iframe)
+    document.body.appendChild(close)
+
+    element.addEventListener('click', e => {
+      e.preventDefault()
+
+      iframe.src = element.href
+      iframe.style.opacity = 1
+      iframe.style.pointerEvents = 'auto'
+      close.style.opacity = 1
+      close.style.pointerEvents = 'auto'
+      document.body.style.overflowY = 'hidden'
+    })
   }
 })
 
