@@ -82,6 +82,17 @@ document.querySelectorAll('figure.design-layout-poster a').forEach((element, ind
   }
 })
 
+document.querySelectorAll('.sqs-gallery-controls a').forEach((element, index) => {
+  const img = document.createElement('img')
+
+  if (element.classList.contains('previous')) {
+    img.src = '/assets/305Fitness_GetCertified_Icons_LeftArrow-06.svg'
+  } else {
+    img.src = '/assets/305Fitness_GetCertified_Icons-05.svg'
+  }
+
+  element.appendChild(img)
+})
 
 
 function things() {
