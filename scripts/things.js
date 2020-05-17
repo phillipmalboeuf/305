@@ -63,7 +63,7 @@ document.querySelectorAll('figure.design-layout-poster a').forEach((element, ind
       iframe.style.pointerEvents = 'none'
       close.style.opacity = 0
       close.style.pointerEvents = 'none'
-      document.body.style.overflowY = 'auto'
+      // document.body.style.overflowY = 'auto'
     })
 
     document.body.appendChild(iframe)
@@ -77,7 +77,7 @@ document.querySelectorAll('figure.design-layout-poster a').forEach((element, ind
       iframe.style.pointerEvents = 'auto'
       close.style.opacity = 1
       close.style.pointerEvents = 'auto'
-      document.body.style.overflowY = 'hidden'
+      // document.body.style.overflowY = 'hidden'
     })
   }
 })
