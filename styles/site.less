@@ -486,6 +486,10 @@ h1 {
   .heading;
 
   margin: 0.5em 0 0.1em;
+
+  @media screen and (max-width: @tweak-mobile-breakpoint) {
+    font-size: @heading-size*0.88;
+  }
 }
 
 .sqs-block-html .sqs-block-content > h1:first-child {
@@ -1396,7 +1400,7 @@ html:not(.squarespace-damask) #collection-5ea854d8d5af594196d4fdc2 {
 
 #limited-spots {
   em {
-    color: #8F809A;
+    color: #666666;
     font-style: normal;
   }
 }
