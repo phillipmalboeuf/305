@@ -38,7 +38,7 @@ if (document.body.id === 'collection-5ea854d8d5af594196d4fdc2') {
 
 document.querySelectorAll('figure.design-layout-poster a').forEach((element, index) => {
   const href = element.getAttribute('href')
-  if (href.includes('youtube') || href.includes('vimeo')) {
+  if (href.includes('youtube.com/embed') || href.includes('vimeo')) {
     console.log(element)
 
     element.classList.add('play-button')
