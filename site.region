@@ -9,14 +9,14 @@
     <style>
       @font-face {
         font-family: 'Inter UI';
-        src: url('/assets/Inter-UI-Regular.otf') format('opentype');
+        src: url('/assets/Inter-Regular.woff2') format('woff2'), url('/assets/Inter-Regular.woff') format('woff');
         font-weight: normal;
         font-style: normal;
       }
 
       @font-face {
         font-family: 'Inter UI';
-        src: url('/assets/Inter-UI-Bold.otf') format('opentype');
+        src: url('/assets/Inter-Bold.woff2') format('woff2'), url('/assets/Inter-Bold.woff') format('woff');
         font-weight: bold;
         font-style: normal;
       }
