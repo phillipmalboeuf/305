@@ -317,6 +317,12 @@ body:not(.image-block-card-dynamic-font-sizing) .sqs-block-image .image-block-ou
 }
 }
 
+.sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button-wrapper,
+.sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a {
+  margin-top: 20px;
+  font-size: @heading-size/1.5 !important;
+}
+
 
 // =======================================================
 
@@ -539,7 +545,7 @@ h3 + h1, h3 + h2, h3 + h3 {
 .sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-card a,
 body:not(.button-style-default).button-style-solid input.sqs-editable-button[type='submit'] {
   position: relative;
-  color: inherit;
+  color: @accent !important;
   font-family: "Three O Five Caps", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: normal;
   font-size: @heading-size / 1.33;
@@ -554,7 +560,7 @@ body:not(.button-style-default).button-style-solid input.sqs-editable-button[typ
   &:hover,
   &:focus {
     opacity: 1;
-    color: #8F809A;
+    color: @flash !important;
   }
 
   &:active {
