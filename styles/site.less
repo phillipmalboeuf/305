@@ -62,7 +62,7 @@ body {
 .sqs-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  // align-items: center;
 }
 
 #collection-5daf442546ed800117bf0168 .sqs-row {
@@ -553,9 +553,9 @@ body:not(.button-style-default).button-style-solid input.sqs-editable-button[typ
   letter-spacing: 0;
   padding: 0.33em 0.33em 0.25em;
 
-  background-color: transparent;
-  border: 0.08em solid currentColor !important;
-  border-radius: 0;
+  background-color: white;
+  border: 0.05em solid currentColor !important;
+  border-radius: 0.2em;
 
   &:hover,
   &:focus {
@@ -667,6 +667,41 @@ body:not(.button-style-default).button-style-solid input.sqs-editable-button[typ
 
   .sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-card-wrapper {
     padding: 0;
+  }
+}
+
+.image-block-stack-text-alignment-left .sqs-block-image .design-layout-stack .image-card > * {
+  text-align: center !important;
+}
+
+.sqs-block-image .design-layout-stack.image-block-outer-wrapper.image-block-v2 .image-title p {
+  .heading;
+  font-size: @heading-size/1.33;
+}
+
+.sqs-block-image .design-layout-stack.image-block-outer-wrapper.image-block-v2 {
+  padding: 1rem;
+}
+
+.sqs-col-12 > .sqs-block-image .design-layout-stack.image-block-outer-wrapper.image-block-v2 {
+  display: flex;
+  flex-direction: column;
+  background: @accent;
+  padding: 10vh 10vw;
+
+  .image-inset {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .image-title p {
+    color: white;
+  }
+
+  .image-card-wrapper {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 1em;
   }
 }
 
@@ -1087,6 +1122,7 @@ a {
   padding: 2em !important;
   background-image: url('/assets/dark_snakes.png');
   background-position: center;
+  border-radius: 6px;
 
   .newsletter-form {
     text-align: left;
@@ -1099,6 +1135,7 @@ a {
   .newsletter-form-header-title,
   .newsletter-form-header-description {
     color: white;
+    text-align: center;
   }
 
   .newsletter-form-header-title {
@@ -1108,6 +1145,7 @@ a {
   .newsletter-form-header-description p,
   .newsletter-form-field-element {
     .body-text;
+    border-radius: 0.2em;
   }
 
   .newsletter-form-field-element {
@@ -1132,7 +1170,7 @@ a {
 
   .newsletter-form-button-wrapper {
     width: 100%;
-    text-align: right;
+    text-align: center;
     height: @heading-size/1.5;
   }
 
@@ -1140,17 +1178,17 @@ a {
     .sqs-block-button .sqs-block-button-element--large;
 
     font-size: @heading-size/2;
-    color: white !important;
-    background: @accent;
-    padding: 0.3em !important;
+    // color: white !important;
+    // background: @accent;
+    padding: 0.33em 0.33em 0.25em !important;
     white-space: normal;
-    max-width: 16ch;
-    border-radius: 0 !important;
+    // max-width: 16ch;
+    border-radius: 0.2em !important;
   }
 
   .newsletter-form-footnote {
     color: white;
-    text-align: right;
+    text-align: center;
   }
 
   .form-submission-text p {
