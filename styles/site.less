@@ -482,6 +482,10 @@ h1, h2, h3 {
   font-weight: normal;
   font-size: @heading-size;
   line-height: 0.88;
+
+  @media screen and (max-width: 640px) {
+    font-size: @heading-size / 1.666 !important;
+  }
 }
 
 h1 {
@@ -554,7 +558,7 @@ body:not(.button-style-default).button-style-solid input.sqs-editable-button[typ
   padding: 0.33em 0.33em 0.25em;
 
   background-color: white;
-  border: 0.05em solid currentColor !important;
+  border: 3px solid currentColor !important;
   border-radius: 0.2em;
 
   &:hover,
@@ -687,7 +691,7 @@ body:not(.button-style-default).button-style-solid input.sqs-editable-button[typ
   display: flex;
   flex-direction: column;
   background: @accent;
-  padding: 10vh 10vw;
+  padding: 10vh 1rem;
 
   .image-inset {
     max-width: 30rem;
@@ -991,6 +995,13 @@ a {
 
   }
 
+  .sqs-block-content p a {
+    text-decoration: underline;
+  }
+
+  .sqs-block-button + .sqs-block-html {
+    margin-top: -17px;
+  }
 }
 
 .Intro:not(.Intro--has-image) + .Main .Main-content {
