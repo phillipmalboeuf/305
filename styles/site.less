@@ -1747,3 +1747,27 @@ html:not(.squarespace-damask) #collection-5ea854d8d5af594196d4fdc2 {
     border-bottom: 3px solid white;
   }
 }
+
+#collection-5f3bdf02fd46d27dcf6fe135 {
+  @media only screen and (max-width: 640px) {
+    .sqs-block-gallery {
+      display: none !important;
+    }
+
+    .sqs-block-horizontalrule {
+      display: none;
+
+      & ~ .sqs-block,
+      & ~ .sqs-row {
+        display: none;
+      }
+
+      & ~ .sqs-block-image,
+      & ~ .sqs-block-button + .sqs-block-spacer,
+      & ~ .sqs-block-button + .sqs-block-spacer ~ .sqs-block,
+      & ~ .sqs-block-button + .sqs-block-spacer ~ .sqs-row {
+        display: block;
+      }
+    }
+  }
+}
