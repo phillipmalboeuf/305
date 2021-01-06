@@ -602,7 +602,7 @@ body:not(.button-style-default).button-style-solid input.sqs-editable-button[typ
   @media screen and (max-width: @tweak-mobile-breakpoint) {
     font-size: @heading-size / 1.66;
     margin: 0.2em 0;
-    width: 66%;
+    // width: 66%;
   }
 }
 
@@ -1803,6 +1803,10 @@ html:not(.squarespace-damask) #collection-5ea854d8d5af594196d4fdc2 {
   }
 }
 
+.sqs-block-html p > a {
+  text-decoration: underline;
+}
+
 
 // NEW ONLINE CERTIFICATION 
 #collection-5fec906e62507369ba4ef9e1 {
@@ -1889,7 +1893,9 @@ img[alt="Header_Desktop_nocopy.jpg"] {
 }
 
   #page-5fec98c9bb6ff82c0ab541f4 .sqs-col-6 .sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-inset {
-    margin-right: 0;
+    @media only screen and (min-width: 640px) {
+      margin-right: 0;
+    }
   }
 
   .sqs-col-6 .sqs-block-image .image-card-wrapper {
