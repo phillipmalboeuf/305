@@ -430,11 +430,11 @@ body:not(.image-block-card-dynamic-font-sizing) .sqs-block-image .image-block-ou
 
 .body-text {
   font-family: "Inter UI", "Inter", Arial, Helvetica, sans-serif !important;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
 
   @media screen and (max-width: @tweak-mobile-breakpoint) {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -1814,11 +1814,21 @@ html:not(.squarespace-damask) #collection-5ea854d8d5af594196d4fdc2 {
   border: 3px solid @accent !important;
   padding: .42em .88em .33em;
   letter-spacing: 0.01em;
+
+  @media only screen and (max-width: 640px) {
+    font-size: 40px !important;
+  }
+}
+
+#page-5fec919bd3b12c2823b7a43a .row:first-child .image-subtitle-wrapper {
+  @media only screen and (max-width: 840px) {
+    display: none;
+  }
 }
 
 img[alt="Header_Desktop_nocopy.jpg"] {
   @media only screen and (max-width: 840px) {
-    object-position: 88%;
+    object-position: 5%;
   }
 }
 
@@ -1850,6 +1860,19 @@ img[alt="Header_Desktop_nocopy.jpg"] {
   }
 }
 
+#page-5fec9b37fedde749e60bd438 .sqs-block-image-figure:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: -5%;
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  background-image: url("/assets/305certificationpage_graphics-12.png");
+  background-size: contain;
+}
+
 #page-5fec9e352e3c733eaacf7cc4 .sqs-block-image-figure {
   @media only screen and (max-width: 640px) {
     width: 33%;
@@ -1863,6 +1886,22 @@ img[alt="Header_Desktop_nocopy.jpg"] {
 .sqs-col-6 .sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-inset {
   max-width: 7rem;
   margin: 0 auto;
+}
+
+  #page-5fec98c9bb6ff82c0ab541f4 .sqs-col-6 .sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-inset {
+    margin-right: 0;
+  }
+
+  .sqs-col-6 .sqs-block-image .image-card-wrapper {
+    width: 100%;
+  }
+
+#page-5fec98c9bb6ff82c0ab541f4 > .row:first-child > .sqs-col-12 {
+  @media only screen and (max-width: 840px) {
+    > .row:nth-child(3) {
+      display: none;
+    }
+  }
 }
 
 h1,
