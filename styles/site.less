@@ -1335,17 +1335,75 @@ html:not(.squarespace-damask) #collection-5ea854d8d5af594196d4fdc2 {
 
     .meta-description,
     .meta-description p {
-      .heading;
+      // .heading;
+      font-size: 20px;
       order: 1;
       width: 100%;
     }
 
     @media screen and (max-width: @tweak-mobile-breakpoint) {
-      .meta-description,
-      .meta-description p,
       .meta-title {
         font-size: 33px;
       }
+    }
+  }
+
+  #collection-600ee4bb6953722c237e181c & {
+    background: #200236;
+
+    .sqs-gallery {
+      max-height: 40vh;
+
+      img {
+        display: none;
+      }
+
+      .meta {
+        width: 100%;
+        max-width: none !important;
+      }
+
+      .meta-title {
+        order: 0;
+        font-size: 120px;
+      }
+
+      .meta-description,
+      .meta-description p {
+        order: 1;
+        width: 100%;
+      }
+
+      .content-fill {
+        .meta-description {
+          font-family: "Three O Five Script";
+          font-size: 33px;
+        }
+      }
+
+      .content-fit {
+        .meta-title {
+          color: @accent;
+        }
+
+        .meta-description,
+        .meta-description p {
+          color: @flash;
+        }
+      }
+    }
+  }
+}
+
+#collection-600ee4bb6953722c237e181c {
+  background: #200236;
+  
+  .Main {
+    background: #200236;
+    color: white;
+
+    h1, h2, h3 {
+      color: white;
     }
   }
 }
