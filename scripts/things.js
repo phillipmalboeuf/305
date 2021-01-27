@@ -39,8 +39,6 @@ if (document.body.id === 'collection-5ea854d8d5af594196d4fdc2') {
 document.querySelectorAll('figure.design-layout-poster a').forEach((element, index) => {
   const href = element.getAttribute('href')
   if (href.includes('youtube.com/embed') || href.includes('vimeo')) {
-    console.log(element)
-
     element.classList.add('play-button')
     element.setAttribute('target', '_blank')
 
@@ -92,6 +90,13 @@ document.querySelectorAll('.sqs-gallery-controls a').forEach((element, index) =>
   }
 
   element.appendChild(img)
+})
+
+document.querySelectorAll('a[href*="https://app.305fitness.com/a/signup"]').forEach((element, index) => {
+  const query = new URLSearchParams(window.location.search)
+  const source = query.get('utm_source')
+
+  element.href = `https://app.305fitness.com/a/signup?utm_source=squarespace&utm_medium=lp&utm_campaign=${source}`
 })
 
 
