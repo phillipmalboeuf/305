@@ -92,7 +92,7 @@ document.querySelectorAll('.sqs-gallery-controls a').forEach((element, index) =>
   element.appendChild(img)
 })
 
-document.querySelectorAll('a[href*="https://app.305fitness.com/a/signup"]').forEach((element, index) => {
+document.querySelectorAll('body:not(#collection-601075a4817c2176e65ee552) a[href*="https://app.305fitness.com/a/signup"]').forEach((element, index) => {
   const query = new URLSearchParams(window.location.search)
   const source = query.get('utm_source')
 
