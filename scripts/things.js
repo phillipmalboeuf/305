@@ -143,7 +143,6 @@ function things() {
 
   if (document.body.id === 'collection-601075a4817c2176e65ee552' && window.innerWidth <= 840) {
     document.querySelectorAll('img[alt="E2_Desktop_nocopy.png"]').forEach((element, index) => {
-      console.log(element)
       element.src = '/assets/studio_mobile_v1.png'
     })
   }
